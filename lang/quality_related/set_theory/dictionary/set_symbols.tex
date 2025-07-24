@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+\usepackage{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Set notation}
+\author{Samuel Dearman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+    \maketitle
+    Set's generally expressed by an uppercased letter with some fancy style. \\
+      $\mathbb{N}$ Natural Numbers, \\
+      $\mathbb{Z}$ Integers, \\
+      $\mathbb{Q}$ Rational Numbers, \\
+      $\mathbb{I}$ Irrational Numbers, \\
+      $\mathbb{R}$ Real Numbers, \\ 
+      $\mathbb{C}$ Complex Numbers \\
+      As in name, a set contains a collection of things. one might say id of set is its every element. \\ 
+      let's create a set, named $\mathbb{S}$ as in Samuel. 
+      What do we know of this set? only information we have is its name. But what's the use of that?
+      We know we need more information for the sake of this god damn set theory to be useful. 
+      Well, we said a set contains collection of things, 'elements'. Let's talk about that. \\
+      $\mathbb{S}$ has 3 things i like. i like, uuhh, okay. 
+      $\mathbb{S}$ contains 1 thing, my name. 
+      and my name is n, $n="Samuel"$\\
+      And i want to show that! 
+      \[
+      n \in \mathbb{S}
+    \]
+      okay, now we know how to show by finger, but thats rude. Now we do this;
+     \[
+       s="Dearman" \to 
+      s \in \mathbb{S} 
+      \]
+      \footnote{\href{file:https://www.google.com}{What is that arrow?}} %% TODO: finish logical symbolism
+      from what we know of, $\mathbb{S} = \{n, s, \dots\}$ \\
+      So, it's something like my credentials
+      okay fuck this shit ass story telling teaching. \\
+      \begin{math}
+        \mathbb{S} = \{n,s,\dots\} \\
+        \mathbb{A} = \{n, s\} \implies \mathbb{A} \subseteq \mathbb{S} \\
+        \text{(if elements of a set is in another set then one of them is a subset or they're equal)} \\ 
+        \mathbb{A} \cap \mathbb{S} = \mathbb{A} \text{       }  \footnote{\href{}{A returning to itself is associated with identity law. it's examined in category theory more deeply. }} \\ %% TODO: Finish category theory about this part!
+        \cap \text{ is a symbol that represents intersection.} \\ 
+        \mathbb{B} \cap \mathbb{S} = \varnothing \\ 
+        \text{means two sets have no common element.} \\ 
+        \mathbb{A} \cup \mathbb{S} = \mathbb{S} \\ 
+        \text{union of two sets,  (} \mathbb{B} \cup \mathbb{S} \neq  \mathbb{S} \text{)}\\
+      \end{math}
+\end{document}
