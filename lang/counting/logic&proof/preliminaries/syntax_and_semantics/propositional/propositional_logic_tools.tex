@@ -16,6 +16,7 @@
 \usepackage{color}
 \usepackage{psfrag}
 \usepackage{bm}
+\usepackage[colorlinks=true, filecolor=blue]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Other Settings
@@ -25,43 +26,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \geometry{a4paper}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Connections, Propositional Logic}
+\title{shortly Propositional Logic}
 \author{Cemil Derman}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
     \maketitle
+    \begin{definition}[Field]
+        P is either true or false, no exceptions. \\
+        True: T, 1, true \\ 
+        False: F, 0, false
+        
+    \end{definition}
     \begin{definition}[Implication/Condition]
-      $P \implies Q$  is false when P is true and Q is false but true otherwise.
-
-      %TODO: write the table and the meanings, and the examples.
-        \begin{displaymath}
-       \begin{array}{|c c|c|}
-         P & Q & P \implies Q \\
-         \hline
-        1 & 1 & 1 \\ 
-        1 & 0 & 0 \\ % some bullshit
-        0 & 1 & 1 \\ 
-        0 & 0 & 1 
-         
-       \end{array}
-     \end{displaymath}
-
-
+    $P \implies Q$  , it isn't needed to be meaningful in the natural language, "if 5 is even, then 6 is even" is a logically true sentence, $0 \implies 1 \equiv 1$
+  
+    Only case where $P \implies Q \equiv 0$ is where $P \equiv 1$ and $Q \equiv 0$
+    the formula $0 \implies 1 \equiv 1$ justifies beginning of set theory with empty set $\emptyset$. %TODO: write set theory and ZFC in order to link here.
     \end{definition}
     \begin{definition}[Biconditional]
-      $P \iff{Q}$ is true only if both P and Q is false or both P and Q is true.
-      %TODO: write the table and the meanings, and the examples. this will be short.
-    
+      $P \iff{Q}$ is true only if both P and Q is false or both P and Q is true. Again, there is no need for a natural language grounding for it to be true,
+     "turkish coffee is great if and only if napoleon is alive." which means turkish coffee is not great, though i do not consent.
     \end{definition}
     
     \begin{definition}[Negation]
-      $\neg P$
+      $\neg P$ not p 
     \end{definition}
 
     \begin{definition}[Conjunction]
-   $P \wedge Q$
-      
+   $P \wedge Q$ P or Q, $P \equiv 0$ and $Q \equiv 0$ implies $P \wedge Q \equiv 0$ 
+      "I am racist and istanbul is fucking sucks" is true, although it is not generally the case that "and" is a connection that requires relevance      
     \end{definition}
 
 
@@ -80,4 +74,6 @@
       $\bot$ or $0$ or $F$ defined as false
       
     \end{definition}
+
+    Further investigation can be found in \href{../../tautology/propositional.pdf}{tautology}
 \end{document}
